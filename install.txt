@@ -1,0 +1,18 @@
+Node Package Manager // i = install
+1-npm init
+2-npm i
+3-npm i express
+4-npm i nodemon
+
+HTML 
+1-npm i ejs
+
+MySQL
+1-npm i mysql2
+
+ORM
+1-npm i sequelize  
+
+
+GITHUB LINK -
+https://github.com/VJ28/mvc_login_app

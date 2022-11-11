@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a style="text-decoration: none; border: 2px solid black; border-radius: 2px; background-color: blueviolet; color: white;" href="/products">Products</a>
+      <a style="text-decoration: none; border: 2px solid black; border-radius: 2px; background-color: blueviolet; color: white;" href="/add-product">Add Product</a>
+    </header>
+    <% if(isAddProduct) {  %>
+    <form style="margin: 20px;" action="/add-product" method="POST">
+      <input type="text" placeholder="Name" name="name">
+      <input type="number" placeholder="Price" name="price">
+      <button type="submit">Add Product</button>
+    </form>
+    <% } else { %>
+
+      <form style="margin: 20px;" action="/edit-product/<%= product.id %>" method="POST">
+        <input type="text" placeholder="Name" name="name" value="<%= product.name %>">
+        <input type="number" placeholder="Price" name="price" value="<%= product.price %>">
+        <button type="submit">Edit Product</button>
+      </form>
+
+      <% } %>
+  </body>
+</html>

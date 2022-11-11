@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a style="text-decoration: none; border: 2px solid black; border-radius: 2px; background-color: blueviolet; color: white;" href="/products">Products</a>
+      <a style="text-decoration: none; border: 2px solid black; border-radius: 2px; background-color: blueviolet; color: white;" href="/add-product">Add Product</a>
+    </header>
+    <h2>Name | Price</h2>
+    <% if(products.length > 0) { %>
+    <h1></h1>
+    <ul>
+      <% for(const product of products) { %>
+      <li style="margin: 10px"><%= product.name %> | <%= product.price %>
+        <a style="text-decoration: none; border: 2px solid black; border-radius: 2px; background-color: blueviolet; color: white;" href="/edit-product/<%= product.id %>">Edit</a>
+      </li>
+      <% } %>
+    </ul>
+
+    <% } else { %>
+    <h2>No Products</h2>
+    <% } %>
+  </body>
+</html>
